@@ -1,0 +1,8 @@
+C:\Users\johnn\source\repos\AlugueldeVeiculos\AlugueldeVeiculos\bin\Debug\AlugueldeVeiculos.exe.config
+C:\Users\johnn\source\repos\AlugueldeVeiculos\AlugueldeVeiculos\bin\Debug\AlugueldeVeiculos.exe
+C:\Users\johnn\source\repos\AlugueldeVeiculos\AlugueldeVeiculos\bin\Debug\AlugueldeVeiculos.pdb
+C:\Users\johnn\source\repos\AlugueldeVeiculos\AlugueldeVeiculos\obj\Debug\AlugueldeVeiculos.csproj.AssemblyReference.cache
+C:\Users\johnn\source\repos\AlugueldeVeiculos\AlugueldeVeiculos\obj\Debug\AlugueldeVeiculos.csproj.SuggestedBindingRedirects.cache
+C:\Users\johnn\source\repos\AlugueldeVeiculos\AlugueldeVeiculos\obj\Debug\AlugueldeVeiculos.csproj.CoreCompileInputs.cache
+C:\Users\johnn\source\repos\AlugueldeVeiculos\AlugueldeVeiculos\obj\Debug\AlugueldeVeiculos.exe
+C:\Users\johnn\source\repos\AlugueldeVeiculos\AlugueldeVeiculos\obj\Debug\AlugueldeVeiculos.pdb
