@@ -13,13 +13,21 @@ namespace AlugueldeVeiculos
         private int cargasuportada;
         public Caminhão(string modelo, int velocidademax, double preco, int cargasuportada) : base(modelo, velocidademax, preco)
         {
-            this.cargasuportada = cargasuportada;
+            this.Cargasuportada = cargasuportada;
         }
 
+        // Como estou adicionando valores no meu arquivo Program em uma lista, não estou chamando esse atributo diretamente, então ok
+        // Porém, se eu fosse a chamá-lo diretamente, poderia chamar essa Propriedade Cargasuportada
+        public int Cargasuportada 
+        {
+            get { return this.cargasuportada; }
+            set { this.cargasuportada = value; }
+        }
+        
         public override void Exibir()
         {
             base.Exibir();
-            Console.WriteLine("Carga suportada: "+ this.cargasuportada);
+            Console.WriteLine("Carga suportada: "+ this.Cargasuportada);
             Console.WriteLine("----------------------");
         }
 

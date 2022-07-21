@@ -11,13 +11,31 @@ namespace AlugueldeVeiculos
     {
         private string modelo;
         private int velocidademax;
-        public double preco;
+        private double preco;
 
         public Veiculo(string modelo, int velocidademax, double preco)
         {
-            this.modelo = modelo;
-            this.velocidademax = velocidademax;
-            this.preco = preco;
+            this.Modelo = modelo;
+            this.Velocidademax = velocidademax;
+            this.Preco = preco;
+        }
+
+        public string Modelo
+        {
+            get { return this.modelo; }
+            set { this.modelo = value; }
+        }
+
+        public int Velocidademax
+        {
+            get { return this.velocidademax; }
+            set { this.velocidademax = value; }
+        }
+
+        public double Preco
+        {
+            get { return this.preco; }
+            set { this.preco = value; }
         }
 
         public virtual void Exibir()

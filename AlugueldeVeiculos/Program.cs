@@ -17,25 +17,34 @@ namespace AlugueldeVeiculos
             bool sair = false;
             while (!sair)
             {
-                Console.WriteLine("Aluguel de veiculos!");
-                Console.WriteLine("1-Deseja alugar um veiculo:\n2-Cadastrar novo veículo:\n3-Sair");
-                int opcao = int.Parse(Console.ReadLine());
-
-                switch (opcao)
+                try
                 {
-                    case 1:
-                        Alugar();
-                        break;
-                    case 2:
-                        Cadastrar();
-                        break;
-                    case 3:
-                        sair = true;
-                        break;
-                    default:
-                        Console.WriteLine("Opção inválida!!");
-                        break;
+                    Console.WriteLine("Aluguel de veiculos!");
+                    Console.WriteLine("1-Deseja alugar um veiculo:\n2-Cadastrar novo veículo:\n3-Sair");
+                    int opcao = int.Parse(Console.ReadLine());
+
+                    switch (opcao)
+                    {
+                        case 1:
+                            Alugar();
+                            break;
+                        case 2:
+                            Cadastrar();
+                            break;
+                        case 3:
+                            sair = true;
+                            break;
+                        default:
+                            Console.WriteLine("Opção inválida!!");
+                            Console.ReadLine();
+                            break;
+                    }
+                }catch (Exception ex)
+                {
+                    Console.WriteLine("Somente numeros");
+                    Console.ReadLine();
                 }
+               
                 Console.Clear();
 
             }
@@ -58,7 +67,7 @@ namespace AlugueldeVeiculos
                 Console.WriteLine("Você escolheu o veiculo ");
                 veiculos[id].Exibir();
 
-                double valorTotal = veiculos[id].preco * horas;
+                double valorTotal = veiculos[id].Preco * horas;
                 Console.WriteLine("O valor por hora será:" + valorTotal);
 
                 Console.ReadLine();
@@ -132,6 +141,7 @@ namespace AlugueldeVeiculos
 
         static public void CadastrarCaminhao()
         {
+           
             Console.WriteLine("Insira o modelo do caminhao");
             string modelo = Console.ReadLine();
             Console.WriteLine("Insira o velocidade maxima do caminhao");
@@ -144,32 +154,44 @@ namespace AlugueldeVeiculos
 
             Caminhão caminhao = new Caminhão(modelo, velocidademax, precohora, carga);
             veiculos.Add(caminhao);
+
+            //DESSA FORMA CONSIGO ACESSAR O QUE TEM DENTRO DO ATRIBUTO cargasuportada
+            //Console.WriteLine(caminhao.Cargasuportada);
+            //Console.ReadLine();
             Salvar();
 
         }
 
         static public void Cadastrar()
         {
-            Console.WriteLine("O que voce deseja cadastrar:");
-            Console.WriteLine("1-Moto\n2-Carro\n3-Caminhao");
-            int op = int.Parse(Console.ReadLine());
-
-            switch (op)
+            try
             {
-                case 1:
-                    CadastrarMoto();
-                    break;
-                case 2:
-                    CadastrarCarro();
-                    break;
-                case 3:
-                    CadastrarCaminhao();
-                    break;
-                default:
-                    Console.WriteLine("Opção inválida");
-                    break;
+                Console.WriteLine("O que voce deseja cadastrar:");
+                Console.WriteLine("1-Moto\n2-Carro\n3-Caminhao");
+                int op = int.Parse(Console.ReadLine());
 
+                switch (op)
+                {
+                    case 1:
+                        CadastrarMoto();
+                        break;
+                    case 2:
+                        CadastrarCarro();
+                        break;
+                    case 3:
+                        CadastrarCaminhao();
+                        break;
+                    default:
+                        Console.WriteLine("Opção inválida");
+                        break;
+
+                }
+            }catch (Exception ex)
+            {
+                Console.WriteLine("Somente numeros!");
+                Console.ReadLine();
             }
+           
         }
 
 
